@@ -1,7 +1,6 @@
-class workerconfig::generic_worker::generic_worker
+class workerconfig::generic_worker::generic_worker {
 
 	file { "C:\\generic-worker\\livelog.exe": 
-		require => File["C:\\generic-worker"],
 		ensure  => present,
 		source  => "https://s3.amazonaws.com/windows-opencloudconfig-packages/RoninPackages/livelog-windows-amd64.exe",
 	}
